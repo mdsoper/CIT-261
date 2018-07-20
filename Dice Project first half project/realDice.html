@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dice Project</title>
+    </head>
+    <body>
+        <h1>Click Button to roll Dice</h1>
+        <button type="button" onclick="addDice()">+</button>
+        <select id="selectSides">
+            <option value="sixSides">6 Sides</option>
+            <option value="twentySides">20 Sides</option>
+        </select>
+        <section id="result_display"><ul></ul> </section>
+        <button type="button" onclick="roll()">roll</button>
+    </body>
+    <script>
+        const dice = [
+        ]
+        function sixSides(){
+            var randSix = Math.floor((Math.random() * 6) + 1);
+            document.getElementById("result_display").innerHTML = randSix;
+        }
+        function twentySides(){
+            var randTwenty = Math.floor((Math.random() * 20) + 1);
+            document.getElementById("result_display").innerHTML = randTwenty;
+        }
+        function addDice(){
+            let x = document.getElementById("selectSides").value;
+            dice.push(x)
+            let list = document.querySelector("#result_display ul");
+            let item = document.createElement("li");
+            item.innerHTML = x;
+            list.appendChild(item);
+        }
+        function roll(){
+            for (i = 0, len = dice.length, item = ""; i < len; i++){
+                
+            }
+        }
+    </script>
+    <style>
+         #result_display1 { width: 100px; height: 100px; border: 1px solid black; } 
+    </style>
+</html>

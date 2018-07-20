@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dice Project</title>
+        <script>
+            function sixSides(){
+                var randSix = Math.floor((Math.random() * 6) + 1);
+                document.getElementById("result_display1").innerHTML = randSix;
+            }
+            function twentySides(){
+                var randTwenty = Math.floor((Math.random() * 20) + 1);
+                document.getElementById("result_display2").innerHTML = randTwenty;
+            }
+        </script>
+        <style>
+         #result_display1 { width: 100px; height: 100px; border: 1px solid black; } 
+        </style>
+    </head>
+
+    <body>
+        <h1>Click Button to roll Dice</h1>
+        <button onclick="sixSides()">Roll 6 sided Dice</button>
+        <button onclick="twentySides()">Roll 20 sided Dice</button>
+        <section id="result_display1"> </section>
+        <section id="result_display2"> </section>
+    </body>
+</html>

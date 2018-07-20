@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>simpleCalc</title>
+    <script>
+        function add() {
+            let num1 = document.getElementById('input1').value;
+            let num2 = document.getElementById('input2').value;
+            let resultBox = document.getElementById('result');
+            resultBox.innerHTML = parseFloat(num1) + parseFloat(num2);
+        }
+        function subtract() {
+            let num1 = document.getElementById('input1').value;
+            let num2 = document.getElementById('input2').value;
+            let resultBox = document.getElementById('result');
+            resultBox.innerHTML = parseFloat(num1) - parseFloat(num2);
+        }
+        function divide() {
+            let num1 = document.getElementById('input1').value;
+            let num2 = document.getElementById('input2').value;
+            let resultBox = document.getElementById('result');
+            if (num2 != "0") {
+                resultBox.innerHTML = parsefloat(num1) / parseFloat(num2);
+            } else {
+                resultBox.innerHTML = "divide by zero"
+            }
+
+        }
+    </script>
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="simpleCalcBody">
+        <div>
+            <input type="text" id="input1"></input>
+            <input type="text" id="input2"></input>
+        </div>
+        <button id="plusSign" onclick="add()">+</button>
+        <button id="minusSign" onclick="subtract()">-</button>
+        <button id="divisionSign" onclick="divide()">/</button>
+        Result:
+        <span id="result"></span>
+    </div>
+</body>
+
+</html>

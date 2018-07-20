@@ -1,0 +1,58 @@
+<!-- // HTML5 video and Audio
+// current state of play
+// this is not as easy as you might think
+// video container formats
+// A container is a wrapper that stores all the necessary data that comprises the video file being ac- cessed, much like a ZIP file wraps or contains files.
+// video Codecs -defines an algorithm for encoding and decoding a multimedia data stream.
+// audio Codecs- An audio codec in theory works the same as a video codec, except that it’s dealing with the streaming of sound rather than video frames.
+// the markup  -->
+<video src="example.webm"></video>
+<video src="example.webm" width="375" height="280"></video>
+<!-- enabling native controls -->
+<video src="example.webm" width="375" height="280" controls></video>
+<!-- the loop attribute -->
+<video src="example.webm" width="375" height="280" controls autoplay loop></video>
+<!-- the preload attribute -->
+<!-- auto:indicatesthatthevideoanditsassociatedmetadatawillstartloadingbefore the video is played. This way, the browser can start playing the video more quickly when the user requests it.
+■ none: indicates that the video shouldn’t load in the background before the user presses play.
+<video src="example.webm" width="375" height="280" controls autoplay ➥loop></video>
+■ metadata: works like none, except that any metadata associated with the video (for example, its dimensions, duration, and the like) can be preloaded, even though the video itself won’t be. -->
+<!-- the poster attribute -->
+<video src="example.webm" width="375" height="280" controls poster="teaser.jpg"></video>
+<!-- the muted attribute -->
+<video src="example.webm" width="375" height="280" poster= "teaser.jpg" muted></video>
+<!-- adding suport for multiple video formats -->
+<source src="example.mp4" type="video/mp4">
+<source src="example.webm" type="video/webm">
+<source src="example.ogv" type="video/ogg">
+<source src="example.mp4" type='video/mp4; codecs="avc1.42E01E, ➥mp4a.40.2"'>
+<source src="example.webm" type='video/webm; codecs="vp8, vorbis"'> 
+<source src="example.ogv" type='video/ogg; codecs="theora, vorbis"'>
+<!-- sosurce order -->
+<video width="375" height="280" poster="teaser.jpg" audio="muted">
+<source src="example.mp4" type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"'>
+<source src="example.webm" type='video/webm; codecs="vp8,vorbis"'>
+<source src="example.ogv" type='video/ogg; codecs="theora, vorbis"'>
+</video>
+<!-- ■ The width and height attributes on the object element should be the same as those on the video element.
+■ To play the file, we’re using the open-source JW Player by LongTail Video,3 which is free for non-commercial use, but you can use whichever video player you prefer.
+■ The Flash video code has a fallback of its own—an image file that displays if the code for the Flash video fails to work.
+■ The fourth param element defines the file to be used (example.mp4). As has been mentioned, most instances of the Flash player now support video playback using the MPEG-4 container format, so there’s no need to encode another video format.
+■ HTML5-enabled browsers that support HTML5 video are instructed by the spec to ignore any content inside the video element that’s not a source tag, so the fallback is safe in all browsers. -->
+<!-- Setting MIME TYPES -->
+<div id="controls" class="hidden">
+    <a id="playPause">Play/Pause</a>
+    <span id="timer">00:00</span>
+    <a id="muteUnmute">Mute/Unmute</a>
+  </div>
+
+  <!-- ■ The text in the play/pause and mute/unmute buttons is removed from view using the text-indent property.
+  ■ A single CSS sprite image is used as a background image to represent the different button states (play, pause, mute, unmute). -->
+  <!-- ■ CSS classes are being used to represent the dif■ CSS classes are being used to represent the different states; those classes will be added and removed using JavaScript.
+■ The "controls" wrapper element is absolutely positioned and placed to overlay the bottom of the video.
+■ We’ve given the controls a default opacity level of 50%, but on mouseover the opacity increases to 100%.
+■ By default, the controls wrapper element is set to display: none using a class of "hidden", which we’ll remove with JavaScript. -->
+<!-- responding when the video ends playback -->
+<!-- videoEl.addEventListener('ended', function () {
+    videoEl.currentTime = 0;
+  }, false); -->

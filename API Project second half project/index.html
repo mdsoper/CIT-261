@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Comic API test</title>
+  </head>
+  <body>
+    <h1>Api Comic thing</h1>
+
+    <div class="wrapper">
+
+      <div class="controls">
+        <form>
+          <p>
+            <label for="search">Enter a characer name: </label>
+            <input type="text" id="search" class="search" required>
+          </p>
+          <p>
+            <button class="submit">Submit search</button>
+          </p>
+        </form>
+      </div>
+      <div class="results">
+        <section>
+        </section>
+      </div>
+
+    </div>
+
+    <script>
+      // Defining a baseURL and key to as part of the request URL
+      var baseURL = 'https://comicvine.gamespot.com/api/';
+      var key = '119760888aaeae0c467c134a22b6667a216debd2';
+      var url;
+      // Grab references to all the DOM elements you'll need to manipulate
+      var searchTerm = document.querySelector('.search');
+      var searchForm = document.querySelector('form');
+      var submitBtn = document.querySelector('.submit');
+      var section = document.querySelector('section');
+      // Event listeners have the form searched using these parameters
+      searchForm.addEventListener('submit', submitSearch);
+      
+      function submitSearch(e) {
+        pageNumber = 0;
+        fetchResults(e);
+    }
+
+function fetchResults(e) {
+  // Assemble the full URL
+  url = 'https://comicvine.gamespot.com/api/characters/?api_key=b24ef0aabc015c369de1d594ce0bfd312777e6f9&%20filter=name:%20Batman';
+console.log(url);
+console.log(e);
+e.preventDefault();
+
+// Use fetch() to make the request to the API
+fetch(url).then(function(result) {
+  return result.json();
+}).then(function(json) {
+  //displayResults(json);
+  console.log(json);
+});
+// if(character.image !== '') {
+   //       url += '&=character.image' + character.image;
+     //   };
+}
+    </script>
+
+
+  </body>
+</html>
+<!-- i am having alot of trouble with this but will continue to work on it for sure. -->

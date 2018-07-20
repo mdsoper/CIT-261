@@ -1,0 +1,71 @@
+[{
+    "name" : "Batman",
+	"real_name" : "Bruce Wayne",
+	"home" : "Gotham",
+    "gender" : "male",
+    "Defining_Feature" : "Rich"
+},
+{
+    "name" : "Wonder Woman",
+	"realname" : "Diana Prince",
+	"home" : "Paris",
+    "gender" : "female",
+    "Defining_Feature" : "Demi God"
+},
+{
+    "name" : "Superman",
+	"realname" : "Clark Kent",
+	"home" : "Metropolis",
+    "gender" : "male",
+    "Defining_Feature" : "Alien"
+},
+{
+    "name" : "Martian Manhunter",
+	"realname" : "John Johns",
+	"home" : "Mars",
+    "gender" : "male",
+    "Defining_Feature" : "Alien"
+},
+{
+    "name" : "Robin",
+	"realname" : "Dick Grayson",
+	"home" : "Gotham",
+    "gender" : "male",
+    "Defining_Feature" : "Boy Wonder"
+},
+{
+    "name" : "The Flash",
+	"realname" : "Barry Allen",
+	"home" : "Central City",
+    "gender" : "male",
+    "Defining_Feature" : "Speedster"
+},
+{
+    "name" : "Cyborg",
+	"realname" : "Victor Stone",
+	"home" : "Central City",
+    "gender" : "male",
+    "Defining_Feature" : "Cyborg"
+},
+{
+    "name" : "Green Lantern",
+	"realname" : "Hal Jordan",
+	"home" : "Coast City",
+    "gender" : "male",
+    "Defining_Feature" : "Power Ring"
+},
+{
+    "name" : "Aquaman",
+	"realname" : "Arthur Curry",
+	"home" : "Atlantis",
+    "gender" : "male",
+    "Defining_Feature" : "Merman"
+},
+{
+    "name" : "Green Arrow",
+	"realname" : "Oliver Queen",
+	"home" : "Star City",
+    "gender" : "male",
+    "Defining_Feature" : "Borderline usless"
+}
+]
